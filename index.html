@@ -2,159 +2,528 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Privacy Policy for Flappy Verse by Neon Pixel Studios.">
-  <title>Privacy Policy - Flappy Verse</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-      color: #252525;
-      max-width: 850px;
-      margin: 40px auto;
-      padding: 0 22px;
-      background: #ffffff;
-    }
-    h1, h2 { color: #172554; }
-    h1 { line-height: 1.3; }
-    a { color: #2563eb; }
-    .updated { color: #666; }
-    footer {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      color: #666;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d20">
+<meta name="description" content="Official Privacy Policy for Flappy Verse by Neon Pixel Studios.">
+<title>Privacy Policy | Flappy Verse - Neon Pixel Studios</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #080d20;
+  --panel: #101a32;
+  --panel2: #131f3b;
+  --text: #eaf0ff;
+  --muted: #a2b0ca;
+  --cyan: #63e5ff;
+  --purple: #9b83ff;
+  --border: rgba(145,175,255,.14);
+}
+
+* { box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at 10% 0%, rgba(41,111,210,.18), transparent 38%),
+    radial-gradient(ellipse at 90% 15%, rgba(133,75,255,.14), transparent 35%),
+    var(--bg);
+  line-height: 1.8;
+}
+
+a { color: var(--cyan); text-decoration: none; }
+a:hover { color: white; text-decoration: underline; }
+
+.container {
+  width: min(1080px, 90%);
+  margin: auto;
+}
+
+/* NAVIGATION */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(8,13,32,.88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .8px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  color: #07101e;
+  font-size: 23px;
+  background: linear-gradient(135deg,var(--cyan),var(--purple));
+  box-shadow: 0 0 25px rgba(99,229,255,.2);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nav-links a:hover { color: var(--cyan); }
+
+/* HERO */
+.hero {
+  padding: 100px 0 65px;
+  text-align: center;
+  position: relative;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 7px 15px;
+  border: 1px solid rgba(99,229,255,.25);
+  border-radius: 30px;
+  color: var(--cyan);
+  background: rgba(99,229,255,.06);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 68px);
+  line-height: 1.12;
+  margin: 25px 0 18px;
+  letter-spacing: -2.5px;
+}
+
+.gradient {
+  background: linear-gradient(90deg,var(--cyan),#a5a0ff,var(--purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.updated {
+  margin-top: 25px;
+  color: #8295b9;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* CONTENT */
+.layout {
+  display: grid;
+  grid-template-columns: 245px 1fr;
+  gap: 28px;
+  align-items: start;
+  padding-bottom: 80px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 100px;
+  background: rgba(16,26,50,.75);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.sidebar h3 {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin: 0 0 15px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 9px 11px;
+  border-radius: 8px;
+  color: #aebbd4;
+  font-size: 12px;
+  margin: 3px 0;
+  transition: .2s;
+}
+
+.sidebar a:hover {
+  background: rgba(99,229,255,.09);
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+.content { min-width: 0; }
+
+.intro-card, .policy-card {
+  background: linear-gradient(145deg,rgba(19,31,59,.96),rgba(13,23,44,.96));
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 32px;
+  margin-bottom: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.12);
+}
+
+.intro-card {
+  border-top: 2px solid var(--cyan);
+}
+
+.intro-card p, .policy-card p, .policy-card li {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.policy-card {
+  scroll-margin-top: 100px;
+  transition: border-color .25s, transform .25s;
+}
+
+.policy-card:hover {
+  border-color: rgba(99,229,255,.35);
+  transform: translateY(-2px);
+}
+
+.policy-card h2 {
+  color: white;
+  font-size: 19px;
+  margin: 0 0 17px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.number {
+  color: var(--cyan);
+  font-size: 12px;
+  background: rgba(99,229,255,.09);
+  padding: 5px 9px;
+  border-radius: 7px;
+}
+
+.policy-card ul { padding-left: 22px; }
+.policy-card li { margin: 7px 0; }
+
+.contact {
+  border: 1px solid rgba(99,229,255,.25);
+  background: linear-gradient(120deg,rgba(35,108,160,.15),rgba(126,83,220,.12));
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.contact h2 { margin-top: 0; }
+.contact p { color: var(--muted); font-size: 14px; }
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 35px 0;
+  background: rgba(5,10,23,.65);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+footer p {
+  margin: 0;
+  color: #7f90ae;
+  font-size: 12px;
+}
+
+/* BACK TO TOP */
+.top {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(99,229,255,.4);
+  border-radius: 13px;
+  background: #142542;
+  color: var(--cyan);
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 0 20px rgba(99,229,255,.12);
+}
+
+.top.show { display: block; }
+
+@media(max-width:800px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+  .sidebar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .nav-links { display: none; }
+  .hero { padding: 70px 0 45px; }
+}
+
+@media(max-width:500px) {
+  .container { width: 92%; }
+  .intro-card,.policy-card { padding: 22px 19px; }
+  .policy-card h2 { font-size: 17px; }
+  .hero p { font-size: 14px; }
+  .footer-inner { text-align: center; justify-content: center; }
+}
+</style>
 </head>
+
 <body>
 
-  <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: November 19, 2026</p>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo">N</div>
+      <span>NEON PIXEL STUDIOS</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#top">Home</a>
+      <a href="#information">Privacy</a>
+      <a href="#advertising">Advertising</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
+<main id="top">
+
+<section class="hero container">
+  <span class="eyebrow">FLAPPY VERSE · PRIVACY CENTER</span>
+  <h1>Your privacy.<br><span class="gradient">Our priority.</span></h1>
+  <p>
+    Welcome to the official Privacy Policy of Flappy Verse.
+    Learn how we handle information, advertising and your privacy
+    while you enjoy the game.
+  </p>
+  <div class="updated">LAST UPDATED · NOVEMBER 19, 2026</div>
+</section>
+
+<div class="container layout">
+
+<aside class="sidebar">
+  <h3>ON THIS PAGE</h3>
+  <nav>
+    <a href="#information">01 · Information We Collect</a>
+    <a href="#advertising">02 · Advertising & AdMob</a>
+    <a href="#usage">03 · How Information Is Used</a>
+    <a href="#sharing">04 · Data Sharing</a>
+    <a href="#storage">05 · Data Storage</a>
+    <a href="#children">06 · Children's Privacy</a>
+    <a href="#choices">07 · Privacy Choices</a>
+    <a href="#services">08 · Third-Party Services</a>
+    <a href="#changes">09 · Policy Changes</a>
+    <a href="#contact">10 · Contact Us</a>
+  </nav>
+</aside>
+
+<div class="content">
+
+<div class="intro-card">
   <p>
     Neon Pixel Studios ("we", "our", or "us") respects your privacy.
     This Privacy Policy explains how information is handled when you
     use the mobile game <strong>Flappy Verse</strong>.
   </p>
+</div>
 
-  <h2>1. Information We Collect</h2>
-  <p>
-    Flappy Verse does not require users to create an account or provide
-    personal information directly to us to play the game.
-  </p>
-  <p>
-    Game progress, scores, coins, and preferences may be stored locally
-    on your device. This information is used to support gameplay.
-  </p>
-  <p>
-    Our advertising provider may automatically collect certain
-    information, such as device identifiers, IP address, advertising
-    interactions, and app activity, as described in Google's privacy
-    documentation.
-  </p>
+<section class="policy-card" id="information">
+<h2><span class="number">01</span> Information We Collect</h2>
+<p>
+  Flappy Verse does not require users to create an account or provide
+  personal information directly to us to play the game.
+</p>
+<p>
+  Game progress, scores, coins, and preferences may be stored locally
+  on your device. This information is used to support gameplay.
+</p>
+<p>
+  Our advertising provider may automatically collect certain
+  information, such as device identifiers, IP address, advertising
+  interactions, and app activity, as described in Google's privacy
+  documentation.
+</p>
+</section>
 
-  <h2>2. Advertising and Google AdMob</h2>
-  <p>
-    Flappy Verse uses Google AdMob to display advertisements, including
-    rewarded advertisements and interstitial advertisements.
-  </p>
-  <p>
-    Google and its advertising partners may use device information,
-    advertising identifiers, and other information to provide,
-    measure, and improve advertisements, subject to applicable settings
-    and consent requirements.
-  </p>
-  <p>
-    Rewarded advertisements may offer in-game rewards, such as coins
-    or an opportunity to revive a character. Rewards are granted
-    according to the game's advertising reward mechanism.
-  </p>
-  <p>
-    For more information about Google's data practices, please visit:
-    <a href="https://policies.google.com/privacy" target="_blank"
-       rel="noopener noreferrer">Google Privacy Policy</a>.
-  </p>
+<section class="policy-card" id="advertising">
+<h2><span class="number">02</span> Advertising and Google AdMob</h2>
+<p>
+  Flappy Verse uses Google AdMob to display advertisements, including
+  rewarded advertisements and interstitial advertisements.
+</p>
+<p>
+  Google and its advertising partners may use device information,
+  advertising identifiers, and other information to provide,
+  measure, and improve advertisements, subject to applicable settings
+  and consent requirements.
+</p>
+<p>
+  Rewarded advertisements may offer in-game rewards, such as coins
+  or an opportunity to revive a character. Rewards are granted
+  according to the game's advertising reward mechanism.
+</p>
+<p>
+  For more information about Google's data practices, please visit:
+  <a href="https://policies.google.com/privacy" target="_blank"
+  rel="noopener noreferrer">Google Privacy Policy</a>.
+</p>
+</section>
 
-  <h2>3. How Information Is Used</h2>
-  <p>Information handled through the game and its advertising services
-    may be used to:</p>
-  <ul>
-    <li>Provide and maintain game functionality.</li>
-    <li>Save game progress and preferences on your device.</li>
-    <li>Display and measure advertisements.</li>
-    <li>Prevent fraud and maintain advertising security.</li>
-    <li>Improve the game's performance and user experience.</li>
-  </ul>
+<section class="policy-card" id="usage">
+<h2><span class="number">03</span> How Information Is Used</h2>
+<p>Information handled through the game and its advertising services may be used to:</p>
+<ul>
+  <li>Provide and maintain game functionality.</li>
+  <li>Save game progress and preferences on your device.</li>
+  <li>Display and measure advertisements.</li>
+  <li>Prevent fraud and maintain advertising security.</li>
+  <li>Improve the game's performance and user experience.</li>
+</ul>
+</section>
 
-  <h2>4. Data Sharing</h2>
-  <p>
-    We do not sell personal information collected directly by us.
-    Information may be processed by Google AdMob and its service
-    providers as necessary to provide advertising and related services.
-    Their handling of information is governed by their own privacy
-    policies.
-  </p>
+<section class="policy-card" id="sharing">
+<h2><span class="number">04</span> Data Sharing</h2>
+<p>
+  We do not sell personal information collected directly by us.
+  Information may be processed by Google AdMob and its service
+  providers as necessary to provide advertising and related services.
+  Their handling of information is governed by their own privacy
+  policies.
+</p>
+</section>
 
-  <h2>5. Data Storage and Retention</h2>
-  <p>
-    Game progress and related gameplay information may remain stored
-    locally on your device until you clear the app's data or uninstall
-    the game. Information processed by third-party advertising
-    providers is retained according to their applicable policies.
-  </p>
+<section class="policy-card" id="storage">
+<h2><span class="number">05</span> Data Storage and Retention</h2>
+<p>
+  Game progress and related gameplay information may remain stored
+  locally on your device until you clear the app's data or uninstall
+  the game. Information processed by third-party advertising
+  providers is retained according to their applicable policies.
+</p>
+</section>
 
-  <h2>6. Children's Privacy</h2>
-  <p>
-    Flappy Verse is not specifically directed at children under the age
-    of 13. We do not knowingly collect personal information directly
-    from children under 13. If you believe a child has provided
-    personal information to us, please contact us.
-  </p>
-  <p>
-    Advertising and age-related settings are subject to the applicable
-    Google Play and Google AdMob requirements.
-  </p>
+<section class="policy-card" id="children">
+<h2><span class="number">06</span> Children's Privacy</h2>
+<p>
+  Flappy Verse is not specifically directed at children under the age
+  of 13. We do not knowingly collect personal information directly
+  from children under 13. If you believe a child has provided
+  personal information to us, please contact us.
+</p>
+<p>
+  Advertising and age-related settings are subject to the applicable
+  Google Play and Google AdMob requirements.
+</p>
+</section>
 
-  <h2>7. Your Privacy Choices</h2>
-  <p>
-    Depending on your location and applicable law, you may have rights
-    regarding personal information processed by advertising providers.
-    You can manage available advertising and privacy settings through
-    your Android device and Google's privacy controls.
-  </p>
+<section class="policy-card" id="choices">
+<h2><span class="number">07</span> Your Privacy Choices</h2>
+<p>
+  Depending on your location and applicable law, you may have rights
+  regarding personal information processed by advertising providers.
+  You can manage available advertising and privacy settings through
+  your Android device and Google's privacy controls.
+</p>
+</section>
 
-  <h2>8. Third-Party Services</h2>
-  <p>
-    The game uses third-party services, including Google AdMob.
-    These services may process information under their own privacy
-    policies. We encourage you to review their policies.
-  </p>
+<section class="policy-card" id="services">
+<h2><span class="number">08</span> Third-Party Services</h2>
+<p>
+  The game uses third-party services, including Google AdMob.
+  These services may process information under their own privacy
+  policies. We encourage you to review their policies.
+</p>
+</section>
 
-  <h2>9. Changes to This Privacy Policy</h2>
-  <p>
-    We may update this Privacy Policy from time to time. Any changes
-    will be published on this page with an updated revision date.
-  </p>
+<section class="policy-card" id="changes">
+<h2><span class="number">09</span> Changes to This Privacy Policy</h2>
+<p>
+  We may update this Privacy Policy from time to time. Any changes
+  will be published on this page with an updated revision date.
+</p>
+</section>
 
-  <h2>10. Contact Us</h2>
-  <p>
-    If you have questions or concerns about this Privacy Policy,
-    please contact:
-  </p>
-  <p>
-    <strong>Developer:</strong> Neon Pixel Studios<br>
-    <strong>Game:</strong> Flappy Verse<br>
-    <strong>Email:</strong>
-    <a href="mailto:neonpixelstudios406@gmail.com">
-      neonpixelstudios406@gmail.com
-    </a>
-  </p>
+<section class="contact" id="contact">
+<h2><span class="number">10</span> Contact Us</h2>
+<p>
+  If you have questions or concerns about this Privacy Policy,
+  please contact:
+</p>
+<p><strong>Developer:</strong> Neon Pixel Studios</p>
+<p><strong>Game:</strong> Flappy Verse</p>
+<p>
+  <strong>Email:</strong>
+  <a href="mailto:neonpixelstudios406@gmail.com">
+    neonpixelstudios406@gmail.com
+  </a>
+</p>
+</section>
 
-  <footer>
-    &copy; 2026 Neon Pixel Studios. All rights reserved.
-  </footer>
+</div>
+</div>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="brand">
+      <div class="logo">N</div>
+      <span>NEON PIXEL STUDIOS</span>
+    </div>
+    <p>© 2026 Neon Pixel Studios. All rights reserved.</p>
+    <p>Made for gamers. Built with passion.</p>
+  </div>
+</footer>
+
+<button class="top" id="topButton" aria-label="Back to top">↑</button>
+
+<script>
+const topButton = document.getElementById('topButton');
+
+window.addEventListener('scroll', () => {
+  topButton.classList.toggle('show', window.scrollY > 350);
+});
+
+topButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 
 </body>
 </html>
